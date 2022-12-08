@@ -1,15 +1,15 @@
 import React from "react";
 import App from "./App";
-function Header(props) {
+import Menu from "./Menu";
+
+function Header(props) {//classes criadas iniciamos com letras maiusculas para poder diferenciar no jsx
     return(
         <header className='header'>
             <h1>{props.name}</h1>
-            <ul className='menu'>
-                <li>{props.links[0]}</li>
-                <li>{props.links[1]}</li>
-                <li>{props.links[2]}</li>
-            </ul>
+            <Menu links={props.links}></Menu>
+            
         </header>
     )
 }
+
 export default Header

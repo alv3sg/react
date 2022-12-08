@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import Header from './Header';
+import Menu from './Menu';
 import './App.css';
 
 function App() {
   return (
-    <Header name="José" links={["Sobre", "Comprar", "Contato"]}></Header>   
+    <Header name="Sara" links={["Sobre", "Comprar", "Contato","Login"]}></Header>   
   );
 }
 
