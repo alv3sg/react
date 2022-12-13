@@ -1,5 +1,5 @@
 import React from "react";
-import App from "./App";
+import "./App";
 import Menu from "./Menu";
 
 function Header(props) {//classes criadas iniciamos com letras maiusculas para poder diferenciar no jsx

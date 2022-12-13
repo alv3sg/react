@@ -1,12 +1,15 @@
-import logo from './logo.svg';
+import React from 'react';
 import Header from './Header';
-import Menu from './Menu';
+import Counter from './Counter';
 import './App.css';
 
 function App() {
   return (
-    <Header name="Sara" links={["Sobre", "Comprar", "Contato","Login"]}></Header>   
-  );
+    <div>
+      <Header name="Sara" links={["Sobre", "Comprar", "Contato","Login"]}></Header>   
+      <Counter count={2}></Counter>
+    </div>
+    );
 }
 
 export default App;
