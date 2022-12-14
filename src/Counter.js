@@ -1,8 +1,19 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 function Counter(props) {
 
     const [count, setCount] = useState(props.count)
+
+    //essa funcao useEffect() é chamada sempre que inicia um estado ou quando um estado sofre atualizacao, pode ser usada varias vezes.
+    //utilizando [] no final da funcao, ela sera chamada apenas quando o estado escolhido for alterado, quando vazio, irá chamar a funcao apenas uma vez quando inicar o estado
+    useEffect(()=>{
+        setCount(parseInt(localStorage.getItem("count")))
+    }, [])
+    
+    useEffect(()=>{
+        document.title = count
+        localStorage.setItem("count", count)
+    }, [count])
 
     function add() {
 
